@@ -10,7 +10,7 @@ export const Characters = () => {
         return response.json()
     }
 
-    const { data, isLoading, isError } = useQuery("characters", getCharacters)
+    const { data, isLoading, error } = useQuery("characters", getCharacters)
 
 
    
@@ -21,14 +21,14 @@ export const Characters = () => {
         )
     }
 
-    if (isError) {
+    if (error) {
         return (
             <p>Error</p>
         )
     }
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-3 container mx-auto max-w-[800px]'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-3 container mx-auto max-w-[1020px]'>
         {
             data.results.map((character) => (
                 <CharacterCard character={character} key={character.id} />

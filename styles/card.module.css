@@ -1,0 +1,8 @@
+.stats {
+    @apply border-2 border-white p-2 rounded-md flex flex-col items-center justify-center;
+}
+
+
+.stats p {
+    @apply text-xs font-bold;
+}
