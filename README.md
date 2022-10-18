@@ -1,7 +1,7 @@
 ## Rickywiki
 
-> Tasks
-![ ] Pagination
-![ ] Character info page
-![ ] Navbar
-![ ] Location info page
+# Tasks
+*[x] Pagination
+*[ ] Character info page
+*[ ] Navbar
+*[ ] Location info page
