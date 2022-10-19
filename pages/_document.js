@@ -5,7 +5,6 @@ export default function Document() {
     <Html>
       <Head>
       <link href="https://fonts.cdnfonts.com/css/gt-walsheim" rel="stylesheet" />
-      <link href="http://fonts.cdnfonts.com/css/pacaembu-trial" rel="stylesheet"> </link>
       </Head>
       <body>
         <Main />

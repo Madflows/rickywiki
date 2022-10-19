@@ -7,12 +7,14 @@ const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
       <Head>
         <title>RickyWiki.dev || Home</title>
       </Head>
-      <Component {...pageProps} />
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+    </>
   );
 }
 
