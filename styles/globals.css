@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* :root {
+  color-scheme: dark;
+} */
+
+::-webkit-scrollbar {
+  width: .5rem;
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  width:  .5rem;
+  @apply rounded-full bg-slate-600 hover:bg-slate-700 border-2 transition cursor-pointer border-white outline-2;
+}
+
 * {
   font-family: 'Gt Walsheim', sans-serif !important;
 }
@@ -22,3 +37,25 @@ a {
   box-sizing: border-box;
 }
 
+.loader div {
+  animation-duration: 0.5s;
+}
+
+.loader div:first-child {
+  animation-delay: 0.1s;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+
+@layer utilities{
+  .pagination-btn {
+    @apply bg-slate-800 p-3 rounded-sm font-bold disabled:cursor-not-allowed disabled:opacity-40;
+  }
+}

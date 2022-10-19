@@ -1,8 +1,7 @@
-import { Eye, Ghost } from 'iconsax-react'
-import React from 'react'
-import Tippy from '@tippyjs/react';
+import { Eye, Ghost } from 'iconsax-react';
+import React from 'react';
+import ReactTooltip from 'react-tooltip';
 
-import 'tippy.js/dist/tippy.css';
 import styles from '../styles/card.module.css';
 
 
@@ -18,20 +17,21 @@ export const CharacterCard = ({ character }) => {
                 </div>
                 <br />
                 <div className='grid grid-cols-2 w-full gap-4'>
-                    <Tippy className={styles.stats} content="Last seen" interactive={true} interactiveBorder={20} delay={100}>
+                    <div className={styles.stats} data-tip="Last seen on" content="Last seen" interactive={true} interactiveBorder={20} delay={100}>
 
                         <p className='flex items-center gap-2 font-bold'><Eye size={30} variant="Bulk" /></p>
                         <p> {character.location.name}</p>
 
-                    </Tippy>
+                    </div>
 
-                    <Tippy className={styles.stats} content="Status" interactive={true} interactiveBorder={20} delay={100}>
+                    <div className={styles.stats} data-tip="Status" content="Status" interactive={true} interactiveBorder={20} delay={100}>
 
                         <p className='flex items-center gap-2 font-bold'><Ghost size={30} variant="Bulk" /></p>
                         <p> {character.status}</p>
 
-                    </Tippy>
+                    </div>
                 </div>
+                <ReactTooltip place="top" type="dark" effect="solid"/>
             </div>
         </div>
     )

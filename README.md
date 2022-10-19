@@ -1,8 +1,13 @@
 ## Rickywiki
 
 > Tasks
-* [ ] Pagination
+* [x] Pagination
+* [x] Navbar
+* [x] Locations page.
+* [x] Episodes page
+* [x] 404 page
+* [x] Characters page
+* [x] Deploy on vercel
 * [ ] Character info page
-* [ ] Navbar
 * [ ] Location info page
-* [ ] Deploy on vercel
+* [ ] Episode info page
