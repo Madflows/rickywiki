@@ -20,12 +20,12 @@ export const Characters = () => {
 
     if (isLoading) {
         return (
-            <div class="min-h-screen flex justify-center items-center bg-slate-900">
+            <div className="min-h-screen flex justify-center items-center bg-slate-900">
 
-                <div class="loader bg-white p-5 rounded-full flex space-x-3">
-                    <div class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
-                    <div class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
-                    <div class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
+                <div className="loader bg-white p-5 rounded-full flex space-x-3">
+                    <div className="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
+                    <div className="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
+                    <div className="w-5 h-5 bg-gray-800 rounded-full animate-bounce"></div>
                 </div>
 
             </div>

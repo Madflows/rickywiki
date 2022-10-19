@@ -1,8 +1,8 @@
 .stats {
-    @apply border-2 border-white p-2 rounded-md flex flex-col items-center justify-center;
+    @apply md:border-2 border-white p-2 rounded-md flex flex-row md:flex-col items-center md:justify-center gap-2;
 }
 
 
 .stats p {
-    @apply text-xs font-bold;
+    @apply text-base md:text-xs font-bold;
 }

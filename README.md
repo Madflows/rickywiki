@@ -8,6 +8,6 @@
 * [x] 404 page
 * [x] Characters page
 * [x] Deploy on vercel
-* [ ] Character info page
-* [ ] Location info page
-* [ ] Episode info page
+* [ ] Character info modal
+* [ ] Location info modal
+* [ ] Episode info modal

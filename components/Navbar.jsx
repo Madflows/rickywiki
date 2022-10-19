@@ -2,8 +2,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 
+
+
 const Navbar = () => {
     const { pathname } = useRouter();
+    
 
     const navItems = [
         {
@@ -43,6 +46,7 @@ const Navbar = () => {
                         ))
                     }
                 </div>
+                <button onClick={() => {}}>Mode</button>
             </div>
         </nav>
     )

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 
 import { QueryClientProvider, QueryClient } from "react-query";
 import Head from "next/head";
+import { ModalProvider } from "../context/ModalContext";
 
 const queryClient = new QueryClient();
 
@@ -10,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>RickyWiki.dev - Home</title>
+        <title>Morty!</title>
       </Head>
       <QueryClientProvider client={queryClient}>
         <Navbar />
