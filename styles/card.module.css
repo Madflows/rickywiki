@@ -1,5 +1,5 @@
 .stats {
-    @apply md:border-2 border-white p-2 rounded-md flex flex-row md:flex-col items-center md:justify-center gap-2;
+    @apply md:border-2 dark:border-white border-slate-400 w-full p-2 rounded-md flex flex-row md:flex-col items-center md:justify-center gap-2;
 }
 
 

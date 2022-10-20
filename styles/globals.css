@@ -25,7 +25,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  @apply bg-slate-900 text-slate-50;
+  @apply dark:bg-slate-900 dark:text-slate-50 bg-slate-100 text-slate-800 transition-all;
+}
+
+body {
+  @apply min-h-screen;
 }
 
 a {
@@ -56,6 +60,6 @@ a {
 
 @layer utilities{
   .pagination-btn {
-    @apply bg-slate-800 p-3 rounded-sm font-bold disabled:cursor-not-allowed disabled:opacity-40;
+    @apply dark:bg-slate-800 dark:text-white bg-slate-300 text-slate-800 p-3 rounded-sm font-bold disabled:cursor-not-allowed disabled:opacity-40;
   }
 }
