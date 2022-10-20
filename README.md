@@ -11,3 +11,4 @@
 * [ ] Character info modal
 * [ ] Location info modal
 * [ ] Episode info modal
+* [ ] Disable checkly
