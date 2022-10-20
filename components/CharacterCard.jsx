@@ -1,3 +1,4 @@
+import { useModal } from 'context/ModalContext';
 import { Eye, Ghost } from 'iconsax-react';
 import React, { useState } from 'react';
 import ReactTooltip from 'react-tooltip';
@@ -5,16 +6,23 @@ import ReactTooltip from 'react-tooltip';
 import styles from '../styles/card.module.css';
 
 
-export const CharacterCard = ({ character }) => {
+export const CharacterCard = ({ character, setShowModal }) => {
+
+    const { setActiveCharacter } = useModal();
+
+    const clickHandler = () => {
+        setActiveCharacter(character)
+        setShowModal(true)
+    }
 
     return (
         <>
-            <div className='rounded-md grid grid-cols-5 overflow-hidden dark:bg-slate-800 dark:text-slate-50 bg-slate-200 text-slate-800'>
+            <div className='rounded-md grid grid-cols-5 overflow-hidden transition-all dark:bg-slate-800 dark:text-slate-50 bg-slate-200 text-slate-800'>
                 <img src={character.image} alt={character.name} className="h-full col-span-2" />
                 <div className='py-2 px-3 col-span-3 flex flex-col gap-2'>
                     <div className='flex flex-col justify-start sm:flex-row items-start sm:items-center sm:justify-between gap-3'>
 
-                        <h3 className='font-bold cursor-pointer text-xl'>{character.name}</h3>
+                        <h3 onClick={clickHandler} className='font-bold cursor-pointer text-xl'>{character.name}</h3>
                         <small className='font-bold rounded bg-emerald-500 px-3'>{character.species}</small>
                     </div>
                     <br />

@@ -17,10 +17,12 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider enableSystem={true} attribute="class">
-          <Navbar />
-          <main className="pt-[7rem] pb-[4rem]">
-            <Component {...pageProps} />
-          </main>
+          <ModalProvider>
+            <Navbar />
+            <main className="pt-[7rem] pb-[4rem]">
+              <Component {...pageProps} />
+            </main>
+          </ModalProvider>
         </ThemeProvider>
       </QueryClientProvider>
     </>
