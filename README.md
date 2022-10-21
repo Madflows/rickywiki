@@ -9,7 +9,8 @@
 * [x] Characters page
 * [x] Added dark/light moe toggle button
 * [x] Deploy on vercel
-* [ ] Character info modal
+* [x] Character modal
+* [ ] Character modal info
 * [ ] Location info modal
 * [ ] Episode info modal
 * [ ] Disable checkly

@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
 
 import { useQuery } from 'react-query';
@@ -42,9 +43,11 @@ export const Characters = () => {
 
     return (
         <>
-            {
-                showModal && <CharacterModal setShowModal={setShowModal} />
-            }
+            <AnimatePresence>
+                {
+                    showModal && <CharacterModal setShowModal={setShowModal} />
+                }
+            </AnimatePresence>
             <div className='grid grid-cols-1 gap-4 w-full container mx-auto max-w-[1020px] px-3'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-3 '>
                     {
