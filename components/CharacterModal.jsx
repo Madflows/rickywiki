@@ -33,7 +33,7 @@ function ModalContent({ character }) {
                     <div className='flex items-center gap-2'>
                         <p className="font-bold">{character.gender}</p>
                         <span>&#x2022;</span>
-                        <a target={"_blank"} href={`https://en.wikipedia.org/wiki/${character.species}`} className='font-bold underline decoration-dashed underline-offset-4 hover:decoration-solid'>{character.species}</a>
+                        <a target={"_blank"} rel="noreferrer" href={`https://en.wikipedia.org/wiki/${character.species}`} className='font-bold underline decoration-dashed underline-offset-4 hover:decoration-solid'>{character.species}</a>
                     </div>
                 </div>
             </div>
