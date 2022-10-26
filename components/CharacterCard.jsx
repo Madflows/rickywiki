@@ -17,27 +17,32 @@ export const CharacterCard = ({ character, setShowModal }) => {
 
     return (
         <>
-            <div className='rounded-md grid grid-cols-5 overflow-hidden transition-all dark:bg-slate-800 dark:text-slate-50 bg-slate-200 text-slate-800'>
-                <img src={character.image} alt={character.name} className="h-full col-span-2" />
-                <div className='py-2 px-3 col-span-3 flex flex-col gap-2'>
+            <div className='rounded-md grid max-w-xs md:max-w-none grid-cols-1 md:grid-cols-5 overflow-hidden transition-all dark:bg-slate-800 dark:text-slate-50 bg-slate-200 text-slate-800'>
+                <img src={character.image} alt={character.name} className="h-full w-full max-w-xs md:col-span-2" />
+                <div className='py-2 px-3 md:col-span-3 flex flex-col gap-2'>
                     <div className='flex flex-col justify-start sm:flex-row items-start sm:items-center sm:justify-between gap-3'>
 
                         <h3 onClick={clickHandler} className='font-bold cursor-pointer text-xl'>{character.name}</h3>
                         <small className='font-bold rounded bg-emerald-500 px-3'>{character.species}</small>
                     </div>
-                    <br />
-                    <div className='grid grid-cols-1 md:grid-cols-2 w-full md:gap-4'>
-                        <div className={styles.stats} data-tip="Last seen on" >
+                    <div className='grid grid-cols-2 py-2 w-full gap-2 md:gap-4'>
+                        <div className={styles.stats} data-tip="Gender">
 
-                            <p className='flex items-center gap-2 font-bold '><Binoculars /></p>
-                            <p> {character.location.name}</p>
+                            <small className='flex items-center gap-2 font-bold text-sm'>Gender</small>
+                            <p> {character.gender}</p>
 
                         </div>
 
                         <div className={styles.stats} data-tip="Status">
 
-                            <p className='flex items-center gap-2 font-bold text-white'><Ghost size={30} variant="Bold" className='dark:text-white text-slate-800' /></p>
+                            <small className='flex items-center gap-2 font-bold text-sm'>Status</small>
                             <p> {character.status}</p>
+
+                        </div>
+                        <div className={`${styles.stats} col-span-2`} data-tip="Last seen on" >
+
+                            <small className='flex items-center gap-2 font-bold  text-sm'>Last Seen</small>
+                            <p> {character.location.name}</p>
 
                         </div>
                     </div>

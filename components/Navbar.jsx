@@ -91,7 +91,9 @@ const NavItem = ({ children, url, pathname }) => {
     return (
         <Link href={url}>
             <a className={`flex items-center justify-center gap-2 font-bold opacity-50 group ${(pathname === url) && 'opacity-100'}`}>
-                <span className={`opacity-40 group-hover:opacity-80 transition-all text-white'}`}>&#8594;</span> {children}
+                <span className={`group-hover:opacity-80 transition-all
+                 text-white ${(pathname === url) ? 'opacity-100' : 'opacity-0'}`}>&#8594;</span> 
+                {children}
             </a>
         </Link>
     )
